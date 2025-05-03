@@ -17,8 +17,11 @@
     cursor: pointer;
 }
 
-#addTodoButton:hover {
-    background-color: #ad00ff;
+
+@media (min-width: 1025px) {
+    #addTodoButton:hover {
+        background-color: #ad00ff;
+    }
 }
 
 #todoInput {

@@ -5,8 +5,10 @@ function AddTodo({todos,setTodos}) {
   const todoInputRef = useRef(null);
 
   const todoAdd = () =>{
-    setTodos([...todos, { id: Date.now(), text: todoInputRef.current.value }]);
-    todoInputRef.current.value = "";
+    if(todoInputRef.current.value.trim().length>0){
+      setTodos([...todos, { id: Date.now(), text: todoInputRef.current.value.trim() }]);
+      todoInputRef.current.value = "";
+    }
   }
 
   const handleKeyDown = (e) => {

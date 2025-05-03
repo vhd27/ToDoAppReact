@@ -17,14 +17,16 @@
     transition: color 0.1s ease;
 }
 
+@media (min-width: 1025px) {
+    .deleteItem:hover {
+        color: rgb(254, 101, 101);
+    }
 
-.deleteItem:hover {
-    color: rgb(254, 101, 101);
+    .editItem:hover {
+        color: rgb(13, 255, 0);
+    }
 }
 
-.editItem:hover {
-    color: rgb(13, 255, 0);
-}
 
 .title {
     color: white;
