@@ -6,7 +6,7 @@
 #addTodoButton {
     align-self: flex-end;
     margin-top: 20px;
-    padding: 10px;
+    padding: 8px;
     background-color: #6600ff;
     color: white;
     font-weight: bold;
@@ -24,9 +24,27 @@
     }
 }
 
+@media (max-width: 1025px) {
+
+    /* Tablet ve altı için stil */
+    #addTodoButton {
+        font-size: 0.6em;
+        padding: 6px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* Telefonlar için stil */
+    #addTodoButton {
+        font-size: 0.7em;
+        padding: 8px;
+    }
+}
+
 #todoInput {
     padding: 10px;
-    font-size: 1em;
+    font-size: 0.9em;
     border: none;
     border-bottom: 1px solid black;
     transition: border-color 0.3s ease;

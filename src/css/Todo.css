@@ -1,12 +1,14 @@
 .todo {
     display: flex;
-    margin-bottom: 10px;
     align-items: center;
+    margin-bottom: 10px;
     justify-content: space-between;
     padding: 5px 10px;
     border-radius: 5px;
     color: white;
     background-color: #6600ff;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .deleteItem,
@@ -27,12 +29,22 @@
     }
 }
 
-
+/* Başlık (textarea) için stil */
 .title {
-    color: white;
+    width: 85%;
     background-color: #6600ff;
     border: none;
-    font-size: 0.8em;
+    color: white;
+    font-size: 1rem;
+    /* Ana yazı boyutu */
+    outline: none;
+    resize: none;
+    padding: 4px;
+    border-radius: 4px;
+    white-space: pre-wrap;
+    word-break: break-word;
+    box-sizing: border-box;
+    line-height: 1.5;
 }
 
 .title:focus {
@@ -41,4 +53,53 @@
 
 .title:hover {
     cursor: default;
+}
+
+.tools {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+/* Responsive Design için medya sorguları */
+@media (max-width: 1025px) {
+
+    /* Tablet ve altı için stil */
+    .title {
+        font-size: 1rem;
+        /* Daha küçük font */
+    }
+
+    .deleteItem,
+    .editItem {
+        font-size: 1.3em;
+        /* Daha küçük ikonlar */
+    }
+
+    .tools {
+        font-size: 1.3rem;
+        /* Daha küçük yazı */
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* Telefonlar için stil */
+    .title {
+        font-size: 1.1rem;
+        /* Telefonlarda daha küçük font */
+    }
+
+    .deleteItem,
+    .editItem {
+        font-size: 1.3em;
+        /* İkon boyutunu telefonlarda küçük tut */
+    }
+
+    .tools {
+        font-size: 1rem;
+        /* Yazıyı daha küçük yap */
+    }
 }

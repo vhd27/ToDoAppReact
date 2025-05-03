@@ -4,6 +4,7 @@ import Todos from './Todos'
 import React, { useEffect, useState } from 'react'
 
 function App() {
+  
   const [todos, setTodos] = useState(() => {
     return JSON.parse(localStorage.getItem("todos")) || [];
   });

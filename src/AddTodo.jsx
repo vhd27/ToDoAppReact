@@ -1,15 +1,16 @@
-import React, { useRef } from 'react'
-import './css/AddTodo.css'
+import React, { useRef } from 'react';
+import './css/AddTodo.css';
 
-function AddTodo({todos,setTodos}) { 
+function AddTodo({ todos, setTodos}) {
   const todoInputRef = useRef(null);
-
-  const todoAdd = () =>{
-    if(todoInputRef.current.value.trim().length>0){
-      setTodos([...todos, { id: Date.now(), text: todoInputRef.current.value.trim() }]);
-      todoInputRef.current.value = "";
+  const MAX_LENGTH = 50;
+  const todoAdd = () => {
+    const inputText = todoInputRef.current.value.trim();
+    if (inputText.length > 0 && inputText.length <= MAX_LENGTH) {
+      setTodos([...todos, { id: Date.now(), text: inputText }]);
+      todoInputRef.current.value = ""; // Inputu temizle
     }
-  }
+  };
 
   const handleKeyDown = (e) => {
     if (e.key === 'Enter') {
@@ -19,10 +20,17 @@ function AddTodo({todos,setTodos}) {
 
   return (
     <div id='addTodo'>
-        <input type="text" id='todoInput' ref={todoInputRef} onKeyDown={handleKeyDown} />
-        <button id='addTodoButton' onClick={todoAdd}>Todo Ekle</button>
+      <input
+        type="text"
+        id='todoInput'
+        ref={todoInputRef}
+        onKeyDown={handleKeyDown}
+        maxLength={MAX_LENGTH} // Burada maksimum karakter uzunluğu belirleniyor
+        placeholder="Yeni todo ekleyin..."
+      />
+      <button id='addTodoButton' onClick={todoAdd}>Todo Ekle</button>
     </div>
-  )
+  );
 }
 
-export default AddTodo
+export default AddTodo;
