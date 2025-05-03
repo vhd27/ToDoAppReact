@@ -38,3 +38,7 @@
 .title:focus {
     outline: none;
 }
+
+.title:hover {
+    cursor: default;
+}
