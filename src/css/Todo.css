@@ -1,0 +1,38 @@
+.todo {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    background-color: #6600ff;
+}
+
+.deleteItem,
+.editItem {
+    font-size: 1.2em;
+    cursor: pointer;
+    color: white;
+    transition: color 0.1s ease;
+}
+
+
+.deleteItem:hover {
+    color: rgb(254, 101, 101);
+}
+
+.editItem:hover {
+    color: rgb(13, 255, 0);
+}
+
+.title {
+    color: white;
+    background-color: #6600ff;
+    border: none;
+    font-size: 0.8em;
+}
+
+.title:focus {
+    outline: none;
+}

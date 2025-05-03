@@ -1,0 +1,27 @@
+#todoApp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+@media (max-width: 600px) {
+    #todoAppContainer {
+        width: 90%;
+        font-size: 1.2em;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    #todoAppContainer {
+        width: 60%;
+        font-size: 2em;
+    }
+}
+
+@media (min-width: 1025px) {
+    #todoAppContainer {
+        width: 30%;
+        font-size: 1.4em;
+    }
+}
